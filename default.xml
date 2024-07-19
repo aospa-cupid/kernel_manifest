@@ -21,19 +21,19 @@
 
   <!-- Kernel platform manifest -->
   <project name="kernel/build" path="kernel_platform/build" revision="refs/heads/kernel.lnx.5.10.r1-rel"/>
-  <project name="msm-5.10" path="kernel_platform/common" remote="cupid" revision="uvite-common"/>
-  <project name="msm-5.10" path="kernel_platform/msm-kernel" upstream="refs/heads/kernel.lnx.5.10.r1-rel" remote="cupid">
+  <project name="kernel_common" path="kernel_platform/common" remote="cupid" revision="uvite-common"/>
+  <project name="msm-kernel" path="kernel_platform/msm-kernel" upstream="refs/heads/kernel.lnx.5.10.r1-rel" remote="cupid">
     <linkfile dest="kernel_platform/common/build.config.msm.waipio" src="build.config.msm.waipio"/>
     <linkfile dest="kernel_platform/common/build.config.msm.waipio.tuivm" src="build.config.msm.waipio.tuivm"/>
     <linkfile dest="kernel_platform/common/build.config.msm.lahaina" src="build.config.msm.lahaina"/>
   </project>
-  <project clone-depth="1" name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" revision="refs/heads/ks-kernel.lnx.1.0.r1-rel"/>
+  <project name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" revision="refs/heads/ks-kernel.lnx.1.0.r1-rel" clone-depth="1"/>
   <project name="android_external_dtc" path="kernel_platform/external/dtc" remote="cupid" revision="main"/>
-  <project name="kernel_platform/kernel/prebuilts/mainline/arm64" revision="refs/heads/kernel.lnx.5.10.r1-rel"/>
-  <project clone-depth="1" name="kernel_platform/prebuilts/build-tools" revision="refs/heads/ks-kernel.lnx.1.0.r1-rel"/>
-  <project name="kernel_platform/system/tools/mkbootimg" path="kernel_platform/tools/mkbootimg" revision="refs/heads/ks-kernel.lnx.1.0.r1-rel"/>
-  <project clone-depth="1" name="platform/prebuilts/clang/host/linux-x86" path="kernel_platform/prebuilts-master/clang/host/linux-x86" remote="aosp"/>
-  <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="kernel_platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" remote="aosp"/>
+  <project name="kernel_platform/kernel/prebuilts/mainline/arm64" revision="refs/heads/kernel.lnx.5.10.r1-rel" clone-depth="1"/>
+  <project name="kernel_platform/prebuilts/build-tools" revision="refs/heads/ks-kernel.lnx.1.0.r1-rel" clone-depth="1"/>
+  <project name="kernel_platform/system/tools/mkbootimg" path="kernel_platform/tools/mkbootimg" revision="refs/heads/ks-kernel.lnx.1.0.r1-rel" clone-depth="1"/>
+  <project name="kernelplatform/prebuilts-master/clang/host/linux-x86" path="kernel_platform/prebuilts-master/clang/host/linux-x86" revision="01778ec49f8fc4adc80bdb611660b4e3ef5257cc" upstream="refs/heads/ks-kernel.lnx.1.0.r3-rel" clone-depth="1"/>
+  <project name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="kernel_platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" remote="aosp" clone-depth="1"/>
 
   <!-- Opensource -->
   <project name="vendor_qcom_opensource" path="vendor/qcom/opensource" remote="cupid" />
